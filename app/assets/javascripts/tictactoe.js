@@ -127,14 +127,14 @@ function board() {
   var newSquares = Array.prototype.map.call(squares, function(obj) {
   return obj.innerHTML 
   })
-//debugger
+
   return newSquares
 }
 
 function saveGame() {
-//debugger
+
   let game = {"state": board()}
-//debugger
+
   if (gameId === 0) {
     $.post("/games", game,  function(resp) {
     gameId = parseInt(resp.data.id)
